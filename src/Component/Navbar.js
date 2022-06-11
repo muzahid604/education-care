@@ -11,15 +11,15 @@ const Navbar = () => {
         localStorage.removeItem('accessToken')
     };
     const menubar = <>
-        <Link to="/" className=' mx-3 hover:text-stone-100 lg:mt-3 font-bold'>HOME</Link>
-        <Link to="/courses" className=' mx-3 lg:mt-3 hover:text-stone-100 font-bold'>COURSES</Link>
-        <Link to="/manageCourse" className='font-bold mx-3 lg:mt-3 hover:text-stone-100'>
+        <Link to="/" className=' mx-3 hover:text-yellow-500 lg:mt-3 font-bold'>HOME</Link>
+        <Link to="/courses" className=' mx-3 lg:mt-3 hover:text-yellow-500 font-bold'>COURSES</Link>
+        <Link to="/manageCourse" className='font-bold mx-3 lg:mt-3 hover:text-yellow-500'>
             MANAGE COURSE            </Link>
 
-        <Link to="/addCourse" className=' font-bold mx-3 lg:mt-3  hover:text-stone-100 '>
+        <Link to="/addCourse" className=' font-bold mx-3 lg:mt-3  hover:text-yellow-500 '>
             ADD COURSE        </Link>
 
-        <Link to="/blogs" className='font-bold mx-3 lg:mt-3 hover:text-stone-100 '>
+        <Link to="/blogs" className='font-bold mx-3 lg:mt-3 hover:text-yellow-500 '>
             BLOGS
         </Link>
         <div className='sm:mt-5 lg:mt-0'>
