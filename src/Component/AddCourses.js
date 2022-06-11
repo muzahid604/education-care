@@ -7,7 +7,7 @@ import Navbar from './Navbar';
 const AddCourses = () => {
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
-        const url = `https://young-taiga-51882.herokuaper`;
+        const url = `https://education-care.herokuapp.com/courses`;
         fetch(url, {
             method: 'POST',
             headers: {
