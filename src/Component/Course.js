@@ -7,7 +7,7 @@ const Course = ({ course }) => {
             <figure><img src={picture} alt="pic" /></figure>
             <div class="card-body">
                 <h2 class="card-title text-blue-500">{name}</h2>
-                <h2 class="text-xl"><span className='text-gray-600'>Trainer:</span> {total_student}</h2>
+                <h2 class="text-xl"><span className='text-gray-600'>Enroled:</span> {total_student}</h2>
                 <h2 class="text-xl "><span className=' text-gray-600'>Trainer:</span> {supplier}</h2>
 
                 <div class="card-actions justify-start">
