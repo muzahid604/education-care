@@ -5,7 +5,7 @@ import Navbar from './Navbar';
 const ManageCourses = () => {
     const [courses, setCourses] = useState([]);
     useEffect(() => {
-        fetch('courses.json')
+        fetch('https://education-care.herokuapp.com/courses')
             .then(res => res.json())
             .then(data => setCourses(data))
     }, [])

@@ -4,7 +4,7 @@ import Course from './Course';
 const Courses = () => {
     const [courses, setCourses] = useState([])
     useEffect(() => {
-        fetch('courses.json')
+        fetch('https://education-care.herokuapp.com/courses')
             .then(res => res.json())
             .then(data => setCourses(data))
     }, [])
@@ -16,14 +16,15 @@ const Courses = () => {
                 <div className='grid grid-cols-1 lg:grid-cols-2 w-5/6 mx-auto gap-8'>
                     {
                         courses?.map(course =>
+
                             <Course
+                                key={course._id}
                                 course={course}
                             ></Course>
                         )
                     }
                 </div>
             </div>
-
         </div>
     );
 };

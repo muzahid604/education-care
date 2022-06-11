@@ -1,7 +1,12 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Course = ({ course }) => {
-    const { name, total_student, supplier, picture, prices } = course
+    const { _id, name, total_student, supplier, picture } = course
+    const navigate = useNavigate();
+    const navigateToItemDetail = _id => {
+        navigate(`/course/${_id}`);
+    }
     return (
         <div class="card card-compact w-96 bg-base-100 shadow-xl">
             <figure><img src={picture} alt="pic" /></figure>
@@ -11,7 +16,7 @@ const Course = ({ course }) => {
                 <h2 class="text-xl "><span className=' text-gray-600'>Trainer:</span> {supplier}</h2>
 
                 <div class="card-actions justify-start">
-                    <button class="btn btn-primary">Enrol Now</button>
+                    <button onClick={() => navigateToItemDetail(_id)} class="btn btn-primary">Enrol Now</button>
                 </div>
             </div>
         </div>
