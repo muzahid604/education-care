@@ -19,9 +19,6 @@ const Navbar = () => {
         <Link to="/addCourse" className=' font-bold mx-3 lg:mt-3  hover:text-yellow-500 '>
             ADD COURSE        </Link>
 
-        <Link to="/blogs" className='font-bold mx-3 lg:mt-3 hover:text-yellow-500 '>
-            BLOGS
-        </Link>
         <div className='sm:mt-5 lg:mt-0'>
             {user ? <Link to="/login" onClick={logout} className=' font-bold mx-3   btn hover:text-black'>LOGOUT</Link> : <Link to="/login" className=' font-bold mx-3   btn hover:text-black'>LOGIN</Link>}
 
