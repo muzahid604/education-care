@@ -41,15 +41,15 @@ const UpdateCourse = () => {
     }
     return (
         <div>
-            <div class="card card-compact w-96 bg-base-100 shadow-xl">
+            <div className="card card-compact w-96 bg-base-100 shadow-xl">
                 <figure><img src={picture} alt="pic" /></figure>
-                <div class="card-body">
-                    <h2 class="card-title text-blue-500">{name}</h2>
-                    <h2 class="text-xl"><span className='text-gray-600'>Enroled:</span> {total_student}</h2>
-                    <h2 class="text-xl "><span className=' text-gray-600'>Trainer:</span> {supplier}</h2>
+                <div className="card-body">
+                    <h2 className="card-title text-blue-500">{name}</h2>
+                    <h2 className="text-xl"><span className='text-gray-600'>Enroled:</span> {total_student}</h2>
+                    <h2 className="text-xl "><span className=' text-gray-600'>Trainer:</span> {supplier}</h2>
 
-                    <div class="card-actions justify-start">
-                        <button onClick={() => updateForDelivery()} class="btn btn-primary">Update Student</button>
+                    <div className="card-actions justify-start">
+                        <button onClick={() => updateForDelivery()} className="btn btn-primary">Update Student</button>
                     </div>
                 </div>
             </div>

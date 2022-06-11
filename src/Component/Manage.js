@@ -10,18 +10,18 @@ const ManageCourses = () => {
             .then(data => setCourses(data))
     }, [])
     const handleDelete = id => {
-    const confirm = window.confirm('Are you sure?');
-    if (confirm) {
-        const url = `https://education-care.herokuapp.com/courses/${id}`
-        fetch(url, {
-            method: 'DELETE'
-        })
-            .then(res => res.json())
-            .then(data => {
-                const remaining = items.filter(item => item._id !== id);
-                setItems(remaining);
+        const confirm = window.confirm('Are you sure?');
+        if (confirm) {
+            const url = `https://education-care.herokuapp.com/courses/${id}`
+            fetch(url, {
+                method: 'DELETE'
             })
-    }
+                .then(res => res.json())
+                .then(data => {
+                    const remaining = courses.filter(course => course._id !== id);
+                    setCourses(remaining);
+                })
+        }
     }
 
     return (
