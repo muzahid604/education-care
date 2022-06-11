@@ -12,22 +12,15 @@ const Navbar = () => {
     };
     const menubar = <>
         <Link to="/" className=' mx-3 hover:text-stone-100 lg:mt-3 font-bold'>HOME</Link>
-        <Link to="/about" className=' mx-3 lg:mt-3 hover:text-stone-100 font-bold'>ABOUT</Link>
+        <Link to="/courses" className=' mx-3 lg:mt-3 hover:text-stone-100 font-bold'>COURSES</Link>
+        <Link to="/manageCourse" className='font-bold mx-3 lg:mt-3 hover:text-stone-100'>
+            MANAGE COURSE            </Link>
 
-        {user ? <Link to="/tools" className=' mx-3 lg:mt-3 hover:text-stone-100 font-bold'>
-            TOOLS
-        </Link> : <p></p>}
-        {user ? <Link to="/dashboard" className=' mx-3 lg:mt-3 hover:text-stone-100 font-bold'>
-            DASHBOARD
-        </Link> : <p></p>}
+        <Link to="/addCourse" className=' font-bold mx-3 lg:mt-3  hover:text-stone-100 '>
+            ADD COURSE        </Link>
 
-        <Link to="/reviews" className='font-bold mx-3 lg:mt-3 hover:text-stone-100'>
-            REVIEWS                    </Link>
         <Link to="/blogs" className='font-bold mx-3 lg:mt-3 hover:text-stone-100 '>
             BLOGS
-        </Link>
-        <Link to="/contact" className=' font-bold mx-3 lg:mt-3  hover:text-stone-100 '>
-            CONTACT
         </Link>
         <div className='sm:mt-5 lg:mt-0'>
             {user ? <Link to="/login" onClick={logout} className=' font-bold mx-3   btn hover:text-black'>LOGOUT</Link> : <Link to="/login" className=' font-bold mx-3   btn hover:text-black'>LOGIN</Link>}
